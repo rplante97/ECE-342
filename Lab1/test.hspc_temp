@@ -1,0 +1,34 @@
+*********************************************************************
+***** Sample HSPC file for ECE 342 - modified Lab9 from ECE 342 *****
+*********************************************************************
+
+******* Define Device Model Files *******
+.include '../../../SpiceModels/ECE214_models.mod'
+.include '../../../SpiceModels/ECE342_models.mod'
+
+******* Define Temperature in C *******
+.temp 27
+**** added line below using 'hspc_addline' function ****
+.tran .1u 1m
+
+******* added using 'hspc_addline' function in MatLab *******
+.ac .1u 1m
+
+******* Initial Conditions *******
+*.ic v(xi0.vout2)=0
+
+******* Globals *******
+.global gnd
+
+******* Parameters *******
+*.param cap1=1.35e-09
+*.param cap2=1.35e-09
+*.param rx=1000
+*.param rd=30000
+*.param ru=60000
+
+******* Simulation Options *******
+.options post=1 delmax=5p relv=1e-6 reli=1e-6 relmos=1e-6 method=gear
+
+
+******* End of HSPC file *******
