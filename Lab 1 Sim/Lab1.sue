@@ -1,31 +1,39 @@
 proc SCHEMATIC_Lab1 {} {
-make LF347 -name xi0 -origin {1180 210}
-make global -name gnd -origin {1240 370}
+make global -name gnd -origin {1240 380}
 make global -orient RXY -name gnd -origin {1240 130}
-make V_dc -orient RXY -name V0 -dc_voltage 12 -ac_voltage 0 -origin {1240 330}
 make V_dc -orient RXY -name V1 -dc_voltage 12 -ac_voltage 0 -origin {1240 170}
-make global -name gnd -origin {1050 300}
-make name_net -name Vout -origin {1390 250}
-make C -name C0 -capacitance 4p -origin {1050 260}
-make R -orient R90 -name R0 -resistance 180k -origin {1240 70}
-make C -orient R90 -name C1 -capacitance 22p -origin {1240 0}
-make I_sin -orient RXY -name I0 -peak_current 1n -frequency 20K -delay .1us -ac_current 0 -origin {950 260}
-  make_wire 950 220 1050 220
-  make_wire 1130 220 1130 230
-  make_wire 1130 300 1130 270
-  make_wire 1050 300 950 300
-  make_wire 1050 300 1130 300
-  make_wire 1350 0 1280 0
-  make_wire 1350 250 1310 250
-  make_wire 1350 250 1390 250
-  make_wire 1280 70 1350 70
-  make_wire 1200 70 1110 70
-  make_wire 1110 220 1130 220
-  make_wire 1200 0 1110 0
-  make_wire 1050 220 1110 220
-  make_wire 1110 0 1110 70
-  make_wire 1110 70 1110 220
-  make_wire 1350 0 1350 70
-  make_wire 1350 70 1350 250
+make global -name gnd -origin {1050 320}
+make name_net -name Vout -origin {1370 250}
+make LF347 -name xi0 -origin {1180 210}
+make V_dc -name V0 -dc_voltage -12 -ac_voltage 0 -origin {1240 340}
+make C -name C0 -capacitance 4p -origin {1020 260}
+make I_sin -name I0 -peak_current 10u -frequency 20k -ac_current 1A -origin {900 260}
+make C -orient R90 -name C1 -capacitance 10p -origin {1240 -10}
+make R -orient R90 -name R0 -resistance 400k -origin {1240 50}
+make name_net -name Vin -origin {1020 200}
+  make_wire 1350 -10 1280 -10
+  make_wire 1280 50 1350 50
+  make_wire 1200 50 1110 50
+  make_wire 1200 -10 1110 -10
+  make_wire 1110 230 1130 230
+  make_wire 1310 250 1350 250
+  make_wire 1020 200 1110 200
+  make_wire 1020 320 1050 320
+  make_wire 900 200 900 220
+  make_wire 900 300 900 320
+  make_wire 900 320 1020 320
+  make_wire 900 200 1020 200
+  make_wire 1350 250 1370 250
+  make_wire 1110 270 1110 320
+  make_wire 1240 290 1240 300
+  make_wire 1350 -10 1350 50
+  make_wire 1350 50 1350 250
+  make_wire 1110 -10 1110 50
+  make_wire 1110 50 1110 200
+  make_wire 1110 230 1110 200
+  make_wire 1110 270 1130 270
+  make_wire 1050 320 1110 320
+  make_wire 1020 300 1020 320
+  make_wire 1020 200 1020 220
 }
 

@@ -9,7 +9,7 @@
 ******* Define Temperature in C *******
 .temp 27
 **** added line below using 'hspc_addline' function ****
-.tran .1u 1m
+.ac dec 200 0 1e6
 
 ******* Initial Conditions *******
 *.ic v(xi0.vout2)=0

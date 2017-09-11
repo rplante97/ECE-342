@@ -2,7 +2,7 @@
 ***** Sample HSPC file for ECE 342 - modified Lab9 from ECE 342 *****
 *********************************************************************
 
-******* Define Device Model Files *******
+******* Define Device Model Files ******
 .include '../../../SpiceModels/ECE214_models.mod'
 .include '../../../SpiceModels/ECE342_models.mod'
 
@@ -10,9 +10,6 @@
 .temp 27
 **** added line below using 'hspc_addline' function ****
 .tran .1u 1m
-
-******* added using 'hspc_addline' function in MatLab *******
-.ac .1u 1m
 
 ******* Initial Conditions *******
 *.ic v(xi0.vout2)=0
@@ -27,7 +24,7 @@
 *.param rd=30000
 *.param ru=60000
 
-******* Simulation Options *******
+******* Simulation Options ******
 .options post=1 delmax=5p relv=1e-6 reli=1e-6 relmos=1e-6 method=gear
 
 
