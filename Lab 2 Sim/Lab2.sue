@@ -1,0 +1,106 @@
+proc SCHEMATIC_Lab2 {} {
+make global -name gnd -origin {1160 760}
+make global -name gnd -origin {1360 740}
+make name_net -name vout -origin {2880 700}
+make name_net -name vin -origin {1160 640}
+make LF347 -name xi0 -origin {1740 620}
+make LF347 -name xi1 -origin {2240 640}
+make LF347 -name xi2 -origin {2720 660}
+make V_sin -name V0 -peak_voltage .1V -frequency 20K -ac_voltage .1V -origin {1160 720}
+make R -orient R90 -name R0 -origin {1260 640}
+make R -name R1 -resistance 10 -origin {1360 700}
+make R -orient R90 -name R2 -resistance 2k -origin {1470 640}
+make C -orient R90 -name C0 -capacitance 200p -origin {1610 640}
+make R -orient R90 -name R3 -resistance 2k -origin {1970 660}
+make C -orient R90 -name C1 -capacitance 200p -origin {2090 660}
+make R -orient R90 -name R4 -resistance 2k -origin {2450 680}
+make C -orient R90 -name C2 -capacitance 200p -origin {2580 680}
+make C -orient R90 -name C3 -capacitance 200p -origin {1780 450}
+make C -orient R90 -name C4 -capacitance 200p -origin {2270 480}
+make C -orient R90 -name C5 -capacitance 200p -origin {2750 500}
+make R -orient R90 -name R5 -resistance 48k -origin {1780 540}
+make R -orient R90 -name R6 -resistance 48k -origin {2270 580}
+make R -orient R90 -name R7 -resistance 48k -origin {2740 590}
+make global -name gnd -origin {2190 770}
+make V_dc -name V1 -dc_voltage 12 -origin {2700 860}
+make V_dc -name V2 -dc_voltage -12 -origin {2800 860}
+make V_dc -name V3 -dc_voltage -12 -origin {2230 870}
+make V_dc -name V4 -dc_voltage 12 -origin {2120 870}
+make V_dc -name V5 -dc_voltage -12 -origin {1650 870}
+make V_dc -name V6 -dc_voltage 12 -origin {1530 870}
+make global -name gnd -origin {2180 910}
+  make_wire 1160 680 1160 640
+  make_wire 1160 640 1220 640
+  make_wire 1300 640 1360 640
+  make_wire 1360 640 1360 660
+  make_wire 1360 640 1430 640
+  make_wire 1740 540 1670 540
+  make_wire 1670 540 1670 640
+  make_wire 1670 640 1650 640
+  make_wire 1670 640 1690 640
+  make_wire 1820 540 1880 540
+  make_wire 1880 540 1880 660
+  make_wire 1880 660 1870 660
+  make_wire 1880 660 1930 660
+  make_wire 2230 580 2160 580
+  make_wire 2160 580 2160 660
+  make_wire 2160 660 2130 660
+  make_wire 2160 660 2190 660
+  make_wire 2310 580 2390 580
+  make_wire 2390 580 2390 680
+  make_wire 2390 680 2370 680
+  make_wire 2390 680 2410 680
+  make_wire 2700 590 2650 590
+  make_wire 2650 590 2650 680
+  make_wire 2650 680 2620 680
+  make_wire 2650 680 2670 680
+  make_wire 2780 590 2860 590
+  make_wire 2860 590 2860 700
+  make_wire 2860 700 2850 700
+  make_wire 2860 700 2880 700
+  make_wire 1740 450 1540 450
+  make_wire 1540 450 1540 640
+  make_wire 1540 640 1510 640
+  make_wire 1540 640 1570 640
+  make_wire 1820 450 1880 450
+  make_wire 1880 450 1880 540
+  make_wire 2230 480 2030 480
+  make_wire 2030 480 2030 660
+  make_wire 2030 660 2010 660
+  make_wire 2030 660 2050 660
+  make_wire 2310 480 2390 480
+  make_wire 2390 480 2390 580
+  make_wire 2710 500 2520 500
+  make_wire 2520 500 2520 680
+  make_wire 2520 680 2490 680
+  make_wire 2520 680 2540 680
+  make_wire 2790 500 2860 500
+  make_wire 2860 500 2860 590
+  make_wire 2190 700 2190 770
+  make_wire 2190 770 1690 770
+  make_wire 1690 770 1690 680
+  make_wire 2190 770 2670 770
+  make_wire 1530 830 1530 580
+  make_wire 1530 580 1800 580
+  make_wire 1800 580 1800 620
+  make_wire 1650 830 1650 700
+  make_wire 1650 700 1800 700
+  make_wire 2120 830 2120 640
+  make_wire 2230 830 2230 720
+  make_wire 2230 720 2300 720
+  make_wire 2120 640 2300 640
+  make_wire 2670 720 2670 770
+  make_wire 2700 820 2700 660
+  make_wire 2700 660 2780 660
+  make_wire 2800 820 2800 740
+  make_wire 2800 740 2780 740
+  make_wire 1530 910 1650 910
+  make_wire 2120 910 1650 910
+  make_wire 2230 910 2700 910
+  make_wire 2700 910 2700 900
+  make_wire 2700 910 2800 910
+  make_wire 2800 910 2800 900
+  make_wire 2180 910 2120 910
+  make_wire 2180 910 2230 910
+}
+
